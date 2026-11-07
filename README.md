@@ -1,2 +1,15 @@
 # mit-8103-advanced-database-portfolio
+
 A practical Advanced Database Systems portfolio for MIT 8103, covering relational database design, SQL query optimisation, transaction management, concurrency control, NoSQL modelling, and distributed/cloud database concepts.
+
+## Case study
+
+The portfolio uses a fictional university course registration and results portal. See [CASE_STUDY.md](CASE_STUDY.md) for its scope, users, data, and core operations.
+
+## Portfolio activities
+
+- [Portfolio 1: Database Design and Modelling](portfolio-1-database-design/README.md) — in progress
+- Portfolio 2: Query Processing and Optimisation
+- Portfolio 3: Transactions and Concurrency
+- Portfolio 4: NoSQL and Advanced Data Models
+- Portfolio 5: Distributed and Cloud Database Exercise
