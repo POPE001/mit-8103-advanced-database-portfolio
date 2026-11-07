@@ -1,0 +1,181 @@
+  matric_number  | academic_year |   term_name    | course_code |          course_title          | section_code | final_percent 
+-----------------+---------------+----------------+-------------+--------------------------------+--------------+---------------
+ SYN-2026-000001 | 2026/2027     | First Semester | SYN-0001    | Synthetic Database Course 0001 | A            |         71.19
+ SYN-2026-000001 | 2026/2027     | First Semester | SYN-0012    | Synthetic Database Course 0012 | B            |         71.19
+ SYN-2026-000001 | 2026/2027     | First Semester | SYN-0024    | Synthetic Database Course 0024 | A            |         71.19
+ SYN-2026-000001 | 2026/2027     | First Semester | SYN-0035    | Synthetic Database Course 0035 | B            |         71.19
+ SYN-2026-000001 | 2026/2027     | First Semester | SYN-0047    | Synthetic Database Course 0047 | A            |         71.19
+(5 rows)
+
+ course_code |          course_title          | section_code | capacity | active_enrolments | seats_available 
+-------------+--------------------------------+--------------+----------+-------------------+-----------------
+ CSC8101     | Database Design                | A            |       30 |                 1 |              29
+ MIT8103     | Advanced Database Systems      | A            |        3 |                 2 |               1
+ SYN-0001    | Synthetic Database Course 0001 | A            |      500 |               258 |             242
+ SYN-0001    | Synthetic Database Course 0001 | B            |      500 |               260 |             240
+ SYN-0002    | Synthetic Database Course 0002 | A            |      500 |               257 |             243
+ SYN-0002    | Synthetic Database Course 0002 | B            |      500 |               262 |             238
+ SYN-0003    | Synthetic Database Course 0003 | A            |      500 |               257 |             243
+ SYN-0003    | Synthetic Database Course 0003 | B            |      500 |               262 |             238
+ SYN-0004    | Synthetic Database Course 0004 | A            |      500 |               258 |             242
+ SYN-0004    | Synthetic Database Course 0004 | B            |      500 |               261 |             239
+ SYN-0005    | Synthetic Database Course 0005 | A            |      500 |               258 |             242
+ SYN-0005    | Synthetic Database Course 0005 | B            |      500 |               258 |             242
+ SYN-0006    | Synthetic Database Course 0006 | A            |      500 |               257 |             243
+ SYN-0006    | Synthetic Database Course 0006 | B            |      500 |               257 |             243
+ SYN-0007    | Synthetic Database Course 0007 | A            |      500 |               258 |             242
+ SYN-0007    | Synthetic Database Course 0007 | B            |      500 |               257 |             243
+ SYN-0008    | Synthetic Database Course 0008 | A            |      500 |               261 |             239
+ SYN-0008    | Synthetic Database Course 0008 | B            |      500 |               257 |             243
+ SYN-0009    | Synthetic Database Course 0009 | A            |      500 |               262 |             238
+ SYN-0009    | Synthetic Database Course 0009 | B            |      500 |               256 |             244
+ SYN-0010    | Synthetic Database Course 0010 | A            |      500 |               260 |             240
+ SYN-0010    | Synthetic Database Course 0010 | B            |      500 |               256 |             244
+ SYN-0011    | Synthetic Database Course 0011 | A            |      500 |               258 |             242
+ SYN-0011    | Synthetic Database Course 0011 | B            |      500 |               257 |             243
+ SYN-0012    | Synthetic Database Course 0012 | A            |      500 |               257 |             243
+ SYN-0012    | Synthetic Database Course 0012 | B            |      500 |               259 |             241
+ SYN-0013    | Synthetic Database Course 0013 | A            |      500 |               257 |             243
+ SYN-0013    | Synthetic Database Course 0013 | B            |      500 |               261 |             239
+ SYN-0014    | Synthetic Database Course 0014 | A            |      500 |               257 |             243
+ SYN-0014    | Synthetic Database Course 0014 | B            |      500 |               262 |             238
+ SYN-0015    | Synthetic Database Course 0015 | A            |      500 |               258 |             242
+ SYN-0015    | Synthetic Database Course 0015 | B            |      500 |               261 |             239
+ SYN-0016    | Synthetic Database Course 0016 | A            |      500 |               258 |             242
+ SYN-0016    | Synthetic Database Course 0016 | B            |      500 |               259 |             241
+ SYN-0017    | Synthetic Database Course 0017 | A            |      500 |               257 |             243
+ SYN-0017    | Synthetic Database Course 0017 | B            |      500 |               257 |             243
+ SYN-0018    | Synthetic Database Course 0018 | A            |      500 |               258 |             242
+ SYN-0018    | Synthetic Database Course 0018 | B            |      500 |               258 |             242
+ SYN-0019    | Synthetic Database Course 0019 | A            |      500 |               261 |             239
+ SYN-0019    | Synthetic Database Course 0019 | B            |      500 |               258 |             242
+ SYN-0020    | Synthetic Database Course 0020 | A            |      500 |               262 |             238
+ SYN-0020    | Synthetic Database Course 0020 | B            |      500 |               257 |             243
+ SYN-0021    | Synthetic Database Course 0021 | A            |      500 |               262 |             238
+ SYN-0021    | Synthetic Database Course 0021 | B            |      500 |               257 |             243
+ SYN-0022    | Synthetic Database Course 0022 | A            |      500 |               260 |             240
+ SYN-0022    | Synthetic Database Course 0022 | B            |      500 |               258 |             242
+ SYN-0023    | Synthetic Database Course 0023 | A            |      500 |               258 |             242
+ SYN-0023    | Synthetic Database Course 0023 | B            |      500 |               257 |             243
+ SYN-0024    | Synthetic Database Course 0024 | A            |      500 |               258 |             242
+ SYN-0024    | Synthetic Database Course 0024 | B            |      500 |               261 |             239
+ SYN-0025    | Synthetic Database Course 0025 | A            |      500 |               258 |             242
+ SYN-0025    | Synthetic Database Course 0025 | B            |      500 |               263 |             237
+ SYN-0026    | Synthetic Database Course 0026 | A            |      500 |               259 |             241
+ SYN-0026    | Synthetic Database Course 0026 | B            |      500 |               263 |             237
+ SYN-0027    | Synthetic Database Course 0027 | A            |      500 |               258 |             242
+ SYN-0027    | Synthetic Database Course 0027 | B            |      500 |               261 |             239
+ SYN-0028    | Synthetic Database Course 0028 | A            |      500 |               258 |             242
+ SYN-0028    | Synthetic Database Course 0028 | B            |      500 |               259 |             241
+ SYN-0029    | Synthetic Database Course 0029 | A            |      500 |               258 |             242
+ SYN-0029    | Synthetic Database Course 0029 | B            |      500 |               259 |             241
+ SYN-0030    | Synthetic Database Course 0030 | A            |      500 |               261 |             239
+ SYN-0030    | Synthetic Database Course 0030 | B            |      500 |               258 |             242
+ SYN-0031    | Synthetic Database Course 0031 | A            |      500 |               262 |             238
+ SYN-0031    | Synthetic Database Course 0031 | B            |      500 |               258 |             242
+ SYN-0032    | Synthetic Database Course 0032 | A            |      500 |               263 |             237
+ SYN-0032    | Synthetic Database Course 0032 | B            |      500 |               258 |             242
+ SYN-0033    | Synthetic Database Course 0033 | A            |      500 |               262 |             238
+ SYN-0033    | Synthetic Database Course 0033 | B            |      500 |               259 |             241
+ SYN-0034    | Synthetic Database Course 0034 | A            |      500 |               259 |             241
+ SYN-0034    | Synthetic Database Course 0034 | B            |      500 |               258 |             242
+ SYN-0035    | Synthetic Database Course 0035 | A            |      500 |               258 |             242
+ SYN-0035    | Synthetic Database Course 0035 | B            |      500 |               261 |             239
+ SYN-0036    | Synthetic Database Course 0036 | A            |      500 |               259 |             241
+ SYN-0036    | Synthetic Database Course 0036 | B            |      500 |               263 |             237
+ SYN-0037    | Synthetic Database Course 0037 | A            |      500 |               260 |             240
+ SYN-0037    | Synthetic Database Course 0037 | B            |      500 |               263 |             237
+ SYN-0038    | Synthetic Database Course 0038 | A            |      500 |               259 |             241
+ SYN-0038    | Synthetic Database Course 0038 | B            |      500 |               263 |             237
+ SYN-0039    | Synthetic Database Course 0039 | A            |      500 |               259 |             241
+ SYN-0039    | Synthetic Database Course 0039 | B            |      500 |               261 |             239
+ SYN-0040    | Synthetic Database Course 0040 | A            |      500 |               259 |             241
+ SYN-0040    | Synthetic Database Course 0040 | B            |      500 |               260 |             240
+ SYN-0041    | Synthetic Database Course 0041 | A            |      500 |               259 |             241
+ SYN-0041    | Synthetic Database Course 0041 | B            |      500 |               259 |             241
+ SYN-0042    | Synthetic Database Course 0042 | A            |      500 |               261 |             239
+ SYN-0042    | Synthetic Database Course 0042 | B            |      500 |               258 |             242
+ SYN-0043    | Synthetic Database Course 0043 | A            |      500 |               263 |             237
+ SYN-0043    | Synthetic Database Course 0043 | B            |      500 |               258 |             242
+ SYN-0044    | Synthetic Database Course 0044 | A            |      500 |               263 |             237
+ SYN-0044    | Synthetic Database Course 0044 | B            |      500 |               258 |             242
+ SYN-0045    | Synthetic Database Course 0045 | A            |      500 |               261 |             239
+ SYN-0045    | Synthetic Database Course 0045 | B            |      500 |               258 |             242
+ SYN-0046    | Synthetic Database Course 0046 | A            |      500 |               258 |             242
+ SYN-0046    | Synthetic Database Course 0046 | B            |      500 |               259 |             241
+ SYN-0047    | Synthetic Database Course 0047 | A            |      500 |               259 |             241
+ SYN-0047    | Synthetic Database Course 0047 | B            |      500 |               262 |             238
+ SYN-0048    | Synthetic Database Course 0048 | A            |      500 |               259 |             241
+ SYN-0048    | Synthetic Database Course 0048 | B            |      500 |               264 |             236
+ SYN-0049    | Synthetic Database Course 0049 | A            |      500 |               259 |             241
+ SYN-0049    | Synthetic Database Course 0049 | B            |      500 |               264 |             236
+ SYN-0050    | Synthetic Database Course 0050 | A            |      500 |               259 |             241
+ SYN-0050    | Synthetic Database Course 0050 | B            |      500 |               262 |             238
+ SYN-0051    | Synthetic Database Course 0051 | A            |      500 |               259 |             241
+ SYN-0051    | Synthetic Database Course 0051 | B            |      500 |               259 |             241
+ SYN-0052    | Synthetic Database Course 0052 | A            |      500 |               260 |             240
+ SYN-0052    | Synthetic Database Course 0052 | B            |      500 |               259 |             241
+ SYN-0053    | Synthetic Database Course 0053 | A            |      500 |               260 |             240
+ SYN-0053    | Synthetic Database Course 0053 | B            |      500 |               258 |             242
+ SYN-0054    | Synthetic Database Course 0054 | A            |      500 |               263 |             237
+ SYN-0054    | Synthetic Database Course 0054 | B            |      500 |               258 |             242
+ SYN-0055    | Synthetic Database Course 0055 | A            |      500 |               263 |             237
+ SYN-0055    | Synthetic Database Course 0055 | B            |      500 |               259 |             241
+ SYN-0056    | Synthetic Database Course 0056 | A            |      500 |               262 |             238
+ SYN-0056    | Synthetic Database Course 0056 | B            |      500 |               258 |             242
+ SYN-0057    | Synthetic Database Course 0057 | A            |      500 |               259 |             241
+ SYN-0057    | Synthetic Database Course 0057 | B            |      500 |               258 |             242
+ SYN-0058    | Synthetic Database Course 0058 | A            |      500 |               258 |             242
+ SYN-0058    | Synthetic Database Course 0058 | B            |      500 |               260 |             240
+ SYN-0059    | Synthetic Database Course 0059 | A            |      500 |               259 |             241
+ SYN-0059    | Synthetic Database Course 0059 | B            |      500 |               262 |             238
+ SYN-0060    | Synthetic Database Course 0060 | A            |      500 |               258 |             242
+ SYN-0060    | Synthetic Database Course 0060 | B            |      500 |               263 |             237
+ SYN-0061    | Synthetic Database Course 0061 | A            |      500 |               258 |             242
+ SYN-0061    | Synthetic Database Course 0061 | B            |      500 |               262 |             238
+ SYN-0062    | Synthetic Database Course 0062 | A            |      500 |               258 |             242
+ SYN-0062    | Synthetic Database Course 0062 | B            |      500 |               260 |             240
+ SYN-0063    | Synthetic Database Course 0063 | A            |      500 |               259 |             241
+ SYN-0063    | Synthetic Database Course 0063 | B            |      500 |               258 |             242
+ SYN-0064    | Synthetic Database Course 0064 | A            |      500 |               258 |             242
+ SYN-0064    | Synthetic Database Course 0064 | B            |      500 |               257 |             243
+ SYN-0065    | Synthetic Database Course 0065 | A            |      500 |               261 |             239
+ SYN-0065    | Synthetic Database Course 0065 | B            |      500 |               257 |             243
+ SYN-0066    | Synthetic Database Course 0066 | A            |      500 |               263 |             237
+ SYN-0066    | Synthetic Database Course 0066 | B            |      500 |               258 |             242
+ SYN-0067    | Synthetic Database Course 0067 | A            |      500 |               262 |             238
+ SYN-0067    | Synthetic Database Course 0067 | B            |      500 |               257 |             243
+ SYN-0068    | Synthetic Database Course 0068 | A            |      500 |               259 |             241
+ SYN-0068    | Synthetic Database Course 0068 | B            |      500 |               257 |             243
+ SYN-0069    | Synthetic Database Course 0069 | A            |      500 |               257 |             243
+ SYN-0069    | Synthetic Database Course 0069 | B            |      500 |               259 |             241
+ SYN-0070    | Synthetic Database Course 0070 | A            |      500 |               258 |             242
+ SYN-0070    | Synthetic Database Course 0070 | B            |      500 |               261 |             239
+ SYN-0071    | Synthetic Database Course 0071 | A            |      500 |               257 |             243
+ SYN-0071    | Synthetic Database Course 0071 | B            |      500 |               262 |             238
+ SYN-0072    | Synthetic Database Course 0072 | A            |      500 |               257 |             243
+ SYN-0072    | Synthetic Database Course 0072 | B            |      500 |               262 |             238
+ SYN-0073    | Synthetic Database Course 0073 | A            |      500 |               258 |             242
+ SYN-0073    | Synthetic Database Course 0073 | B            |      500 |               260 |             240
+ SYN-0074    | Synthetic Database Course 0074 | A            |      500 |               258 |             242
+ SYN-0074    | Synthetic Database Course 0074 | B            |      500 |               257 |             243
+ SYN-0075    | Synthetic Database Course 0075 | A            |      500 |               257 |             243
+ SYN-0075    | Synthetic Database Course 0075 | B            |      500 |               256 |             244
+ SYN-0076    | Synthetic Database Course 0076 | A            |      500 |               259 |             241
+ SYN-0076    | Synthetic Database Course 0076 | B            |      500 |               257 |             243
+ SYN-0077    | Synthetic Database Course 0077 | A            |      500 |               262 |             238
+ SYN-0077    | Synthetic Database Course 0077 | B            |      500 |               257 |             243
+ SYN-0078    | Synthetic Database Course 0078 | A            |      500 |               262 |             238
+ SYN-0078    | Synthetic Database Course 0078 | B            |      500 |               256 |             244
+ SYN-0079    | Synthetic Database Course 0079 | A            |      500 |               259 |             241
+ SYN-0079    | Synthetic Database Course 0079 | B            |      500 |               256 |             244
+ SYN-0080    | Synthetic Database Course 0080 | A            |      500 |               257 |             243
+ SYN-0080    | Synthetic Database Course 0080 | B            |      500 |               257 |             243
+(162 rows)
+
+ section_code | students_with_results | average_final_percent 
+--------------+-----------------------+-----------------------
+ A            |                   304 |                 74.49
+ B            |                   304 |                 74.84
+(2 rows)
+
