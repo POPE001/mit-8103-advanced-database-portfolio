@@ -1,0 +1,7 @@
+Inserted transcript documents:
+2
+Indexes:
+[
+  '_id_',
+  'terms.courses.courseCode_1'
+]

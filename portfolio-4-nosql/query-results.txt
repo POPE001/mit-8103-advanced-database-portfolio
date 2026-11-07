@@ -1,0 +1,86 @@
+Transcript lookup by matriculation number:
+{
+  _id: 'MIT-2026-001',
+  student: {
+    firstName: 'Ada',
+    lastName: 'Okafor',
+    email: 'ada.okafor@example.edu'
+  },
+  programme: {
+    code: 'MIT',
+    name: 'Master of Information Technology'
+  },
+  terms: [
+    {
+      academicYear: '2026/2027',
+      termName: 'First Semester',
+      courses: [
+        {
+          courseCode: 'MIT8103',
+          courseTitle: 'Advanced Database Systems',
+          sectionCode: 'A',
+          status: 'completed',
+          assessments: [
+            {
+              no: 1,
+              title: 'Coursework',
+              scorePercent: 78,
+              weightPercent: 40
+            },
+            {
+              no: 2,
+              title: 'Final Examination',
+              scorePercent: 82,
+              weightPercent: 60
+            }
+          ],
+          finalPercent: 80.4
+        },
+        {
+          courseCode: 'CSC8101',
+          courseTitle: 'Database Design',
+          sectionCode: 'A',
+          status: 'completed',
+          assessments: [
+            {
+              no: 1,
+              title: 'Coursework',
+              scorePercent: 74,
+              weightPercent: 40
+            },
+            {
+              no: 2,
+              title: 'Final Examination',
+              scorePercent: 79,
+              weightPercent: 60
+            }
+          ],
+          finalPercent: 77
+        }
+      ]
+    }
+  ]
+}
+Students with an MIT8103 result in the first semester:
+[
+  {
+    _id: 'MIT-2026-001',
+    studentName: 'Ada Okafor',
+    courseCode: 'MIT8103',
+    finalPercent: 80.4
+  },
+  {
+    _id: 'MIT-2026-002',
+    studentName: 'Tunde Bello',
+    courseCode: 'MIT8103',
+    finalPercent: 70.4
+  }
+]
+Average MIT8103 final percentage:
+[
+  {
+    studentsWithResults: 2,
+    courseCode: 'MIT8103',
+    averageFinalPercent: 75.4
+  }
+]
