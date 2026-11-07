@@ -1,0 +1,8 @@
+BEGIN
+UPDATE 1
+COMMIT
+ section_id | capacity 
+------------+----------
+        901 |        4
+(1 row)
+

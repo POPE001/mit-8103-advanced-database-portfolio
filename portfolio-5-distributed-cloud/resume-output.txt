@@ -1,0 +1,6 @@
+ALTER SUBSCRIPTION
+     subname     | subenabled 
+-----------------+------------
+ p5_subscription | t
+(1 row)
+

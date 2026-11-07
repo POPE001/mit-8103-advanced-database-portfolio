@@ -12,5 +12,5 @@ The portfolio uses a fictional university course registration and results portal
 - [Portfolio 2: Query Processing and Optimisation](portfolio-2-query-optimisation/README.md) — complete
 - [Portfolio 3: Transactions and Concurrency](portfolio-3-transactions-concurrency/README.md) — complete
 - [Portfolio 4: NoSQL and Advanced Data Models](portfolio-4-nosql/README.md) — complete
-- [Portfolio 5: Distributed and Cloud Database Exercise](portfolio-5-distributed-cloud/README.md)
+- [Portfolio 5: Distributed and Cloud Database Exercise](portfolio-5-distributed-cloud/README.md) — complete
 - [Final Documentation](final-documentation/README.md)

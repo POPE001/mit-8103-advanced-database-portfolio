@@ -1,0 +1,6 @@
+CREATE ROLE replicator WITH LOGIN REPLICATION PASSWORD 'portfolio5_replica_demo';
+GRANT CONNECT ON DATABASE mit8103_portfolio5 TO replicator;
+GRANT USAGE ON SCHEMA public TO replicator;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO replicator;
+
+CREATE PUBLICATION p5_publication FOR ALL TABLES;

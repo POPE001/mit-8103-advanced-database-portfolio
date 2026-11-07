@@ -1,0 +1,51 @@
+services:
+  primary:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: mit8103_portfolio5
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: portfolio5_demo_only
+    command:
+      - postgres
+      - -c
+      - wal_level=logical
+      - -c
+      - max_wal_senders=10
+      - -c
+      - max_replication_slots=10
+      - -c
+      - max_worker_processes=16
+    volumes:
+      - primary_data:/var/lib/postgresql/data
+      - ../portfolio-1-database-design/schema.sql:/docker-entrypoint-initdb.d/00-schema.sql:ro
+      - ../portfolio-1-database-design/seed-data.sql:/docker-entrypoint-initdb.d/01-seed.sql:ro
+      - ./primary-publication.sql:/docker-entrypoint-initdb.d/02-publication.sql:ro
+      - ./:/p5:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+  replica:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: mit8103_portfolio5
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: portfolio5_demo_only
+    volumes:
+      - replica_data:/var/lib/postgresql/data
+      - ../portfolio-1-database-design/schema.sql:/docker-entrypoint-initdb.d/00-schema.sql:ro
+      - ./:/p5:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+    depends_on:
+      primary:
+        condition: service_healthy
+
+volumes:
+  primary_data:
+  replica_data:

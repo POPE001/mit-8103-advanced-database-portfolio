@@ -1,0 +1,10 @@
+ section_id | capacity 
+------------+----------
+        901 |        3
+(1 row)
+
+ replicated_students 
+---------------------
+                   4
+(1 row)
+

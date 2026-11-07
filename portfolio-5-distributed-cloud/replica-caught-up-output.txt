@@ -1,0 +1,15 @@
+ pg_sleep 
+----------
+ 
+(1 row)
+
+ section_id | capacity 
+------------+----------
+        901 |        4
+(1 row)
+
+ replicated_students 
+---------------------
+                   4
+(1 row)
+
