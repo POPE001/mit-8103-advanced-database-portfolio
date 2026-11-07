@@ -2,20 +2,28 @@
 
 Design a relational database for the [university portal case study](../CASE_STUDY.md).
 
+The current working design uses PostgreSQL. Review the assumptions in [requirements.md](requirements.md) before treating the model as final.
+
+## Design files
+
+- [Requirements and business rules](requirements.md)
+- [ER diagram](erd.md)
+- [PostgreSQL schema](schema.sql)
+- [Sample data](seed-data.sql)
+- [Drop-after-marks edge-case check](edge-case-check.sql)
+- [PostgreSQL run summary](run-verification.md)
+- [Normalisation explanation](normalisation.md)
+
 ## Planned evidence
 
-- Case-study scope and requirements
-- ER diagram
-- Relational schema with primary keys, foreign keys, and constraints
-- SQL schema and seed-data scripts
-- Normalisation explanation, including any deliberate denormalisation
 - Screenshots or command output showing the schema and sample data
+- Query output demonstrating the main relationships
+- Output from the rollback-only edge-case check
 
 ## Working design questions
 
-- Which attributes identify a student, course, section, and academic term?
-- How should a section's lecturer assignment be represented if team teaching is needed?
-- Which enrollment statuses count toward the section capacity?
-- How are assessment weights and final grades represented and calculated?
+- The first version supports multiple lecturers per section through `section_lecturer`.
+- Only `enrolled` registrations count toward capacity; `dropped` and `completed` rows do not.
+- Assessment marks are percentages, and a final mark is calculated from assessment weights rather than stored separately.
 
-Record the final decisions in this folder and keep the model consistent with the later portfolio activities.
+These are draft design choices. Review and be ready to explain them before submission.
