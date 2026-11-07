@@ -9,8 +9,8 @@ The portfolio uses a fictional university course registration and results portal
 ## Portfolio activities
 
 - [Portfolio 1: Database Design and Modelling](portfolio-1-database-design/README.md) — complete
-- [Portfolio 2: Query Processing and Optimisation](portfolio-2-query-optimisation/README.md) — in progress
-- [Portfolio 3: Transactions and Concurrency](portfolio-3-transactions-concurrency/README.md)
+- [Portfolio 2: Query Processing and Optimisation](portfolio-2-query-optimisation/README.md) — complete
+- [Portfolio 3: Transactions and Concurrency](portfolio-3-transactions-concurrency/README.md) — in progress
 - [Portfolio 4: NoSQL and Advanced Data Models](portfolio-4-nosql/README.md)
 - [Portfolio 5: Distributed and Cloud Database Exercise](portfolio-5-distributed-cloud/README.md)
 - [Final Documentation](final-documentation/README.md)

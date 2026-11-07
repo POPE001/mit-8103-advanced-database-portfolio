@@ -1,0 +1,14 @@
+Timing is on.
+BEGIN
+ section_id 
+------------
+        901
+(1 row)
+
+ pg_sleep 
+----------
+ 
+(1 row)
+
+COMMIT
+Time: 6030.391 ms (00:06.030)

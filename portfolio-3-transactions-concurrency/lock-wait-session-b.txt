@@ -1,0 +1,9 @@
+Timing is on.
+BEGIN
+ section_id 
+------------
+        901
+(1 row)
+
+COMMIT
+Time: 5207.444 ms (00:05.207)

@@ -1,0 +1,15 @@
+Timing is on.
+BEGIN
+Time: 2.888 ms
+Time: 26.888 ms
+Snapshot saw active= 2  capacity= 3  section= 901
+ pg_sleep 
+----------
+ 
+(1 row)
+
+Time: 2006.079 ms (00:02.006)
+INSERT 0 1
+Time: 1.981 ms
+COMMIT
+Time: 1.194 ms

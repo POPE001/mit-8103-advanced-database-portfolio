@@ -1,0 +1,12 @@
+ section_id | capacity | active_enrolments | seats_available 
+------------+----------+-------------------+-----------------
+        901 |        3 |                 3 |               0
+(1 row)
+
+ student_id |  status  
+------------+----------
+       1001 | enrolled
+       1002 | enrolled
+       1003 | enrolled
+(3 rows)
+
