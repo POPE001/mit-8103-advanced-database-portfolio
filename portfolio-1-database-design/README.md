@@ -14,16 +14,16 @@ The current working design uses PostgreSQL. Review the assumptions in [requireme
 - [PostgreSQL run summary](run-verification.md)
 - [Normalisation explanation](normalisation.md)
 
-## Planned evidence
+## Evidence included
 
-- Screenshots or command output showing the schema and sample data
-- Query output demonstrating the main relationships
-- Output from the rollback-only edge-case check
+- Entity-relationship diagram, requirements, schema, sample data, and normalization explanation
+- Rollback-only SQL check for marks after an enrolment is dropped
+- PostgreSQL run summary with the observed edge-case and weighted-result outcomes
 
-## Working design questions
+## Design decisions to review
 
 - The first version supports multiple lecturers per section through `section_lecturer`.
 - Only `enrolled` registrations count toward capacity; `dropped` and `completed` rows do not.
 - Assessment marks are percentages, and a final mark is calculated from assessment weights rather than stored separately.
 
-These are draft design choices. Review and be ready to explain them before submission.
+These are the current model assumptions. Review them and be ready to explain the reasons for each choice before submission.

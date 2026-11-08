@@ -16,11 +16,10 @@ The workload uses a reproducible synthetic dataset and compares the same course-
 - [Weighted query plans before and after indexes](explain-before.txt), [after](explain-after.txt)
 - [Section assessment plans before and after indexes](assessment-explain-before.txt), [after](assessment-explain-after.txt)
 
-## Planned evidence
+## Evidence included
 
-- SQL queries and their results
-- Execution plans for selected queries
-- Indexing or query rewrites, with before-and-after plan evidence
-- Brief analysis of the measured results and test data size
+- Representative SQL queries and captured query results
+- Before-and-after `EXPLAIN (ANALYZE, BUFFERS)` plans for both workloads
+- Candidate indexes and a brief analysis of plan changes, timings, buffer activity, and dataset size
 
 Run Portfolio 1's `schema.sql` and `seed-data.sql` in a fresh database first, then run `generate-data.sql`. Capture both performance queries before applying `indexes.sql` and again afterward.

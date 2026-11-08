@@ -9,7 +9,7 @@ This activity uses PostgreSQL logical replication in a local Docker Compose netw
 - [Publisher and subscriber architecture](architecture.md)
 - [Docker Compose setup](compose.yaml)
 - [Publication and subscription SQL](primary-publication.sql), [subscriber setup](subscriber-subscription.sql)
-- [Write, read, and replication-status checks](write-primary.sql), [verify-replica.sql], [status-primary.sql], [status-replica.sql]
+- [Write to the publisher](write-primary.sql), [read from the subscriber](verify-replica.sql), [check publisher status](status-primary.sql), and [check subscriber status](status-replica.sql)
 - [Pause replication](pause-replication.sql) and [resume replication](resume-replication.sql)
 - [Run results](run-results.md)
 

@@ -17,11 +17,11 @@ The workload uses the limited-seat section from Portfolio 1. It first shows the 
 - [Protected session outputs](locked-session-1003.txt), [session 1004](locked-session-1004.txt), and [final seat count](locked-verify.txt)
 - [Standalone row-lock wait check](lock-wait-session-a.txt) and [waiting session](lock-wait-session-b.txt)
 
-## Planned evidence
+## Evidence included
 
-- Transactions that commit and roll back
+- Commit and rollback script with captured output
 - Two-session reproduction of overbooking under `READ COMMITTED` without a row lock
-- The row-locking control and output showing only one registration succeeds
-- A short explanation of the observed behaviour
+- Row-locking control with session output showing only one registration succeeds
+- Run summary explaining the observed behaviour and final seat count
 
 Run these scripts only in a disposable database created from the Portfolio 1 schema and seed data. The concurrency attempt scripts require two simultaneous `psql` sessions. Recorded output and the conclusions are in [run-results.md](run-results.md).
