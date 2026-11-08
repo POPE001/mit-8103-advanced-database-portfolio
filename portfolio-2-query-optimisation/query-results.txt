@@ -1,4 +1,4 @@
-  matric_number  | academic_year |   term_name    | course_code |          course_title          | section_code | final_percent 
+  matric_number  | academic_year |   term_name    | course_code |          course_title          | section_code | final_percent
 -----------------+---------------+----------------+-------------+--------------------------------+--------------+---------------
  SYN-2026-000001 | 2026/2027     | First Semester | SYN-0001    | Synthetic Database Course 0001 | A            |         71.19
  SYN-2026-000001 | 2026/2027     | First Semester | SYN-0012    | Synthetic Database Course 0012 | B            |         71.19
@@ -7,7 +7,7 @@
  SYN-2026-000001 | 2026/2027     | First Semester | SYN-0047    | Synthetic Database Course 0047 | A            |         71.19
 (5 rows)
 
- course_code |          course_title          | section_code | capacity | active_enrolments | seats_available 
+ course_code |          course_title          | section_code | capacity | active_enrolments | seats_available
 -------------+--------------------------------+--------------+----------+-------------------+-----------------
  CSC8101     | Database Design                | A            |       30 |                 1 |              29
  MIT8103     | Advanced Database Systems      | A            |        3 |                 2 |               1
@@ -173,7 +173,7 @@
  SYN-0080    | Synthetic Database Course 0080 | B            |      500 |               257 |             243
 (162 rows)
 
- section_code | students_with_results | average_final_percent 
+ section_code | students_with_results | average_final_percent
 --------------+-----------------------+-----------------------
  A            |                   304 |                 74.49
  B            |                   304 |                 74.84

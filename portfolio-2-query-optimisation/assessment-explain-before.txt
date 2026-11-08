@@ -1,24 +1,24 @@
-                                                                          QUERY PLAN                                                                           
+                                                                          QUERY PLAN
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
- Sort  (cost=1616.48..1616.50 rows=8 width=58) (actual rows=4 loops=1)
+ Sort  (cost=1616.03..1616.05 rows=8 width=58) (actual rows=4 loops=1)
    Sort Key: cs.section_code, a.assessment_no
    Sort Method: quicksort  Memory: 25kB
-   Buffers: shared hit=2488
-   ->  HashAggregate  (cost=1616.24..1616.36 rows=8 width=58) (actual rows=4 loops=1)
+   Buffers: shared hit=2470
+   ->  HashAggregate  (cost=1615.79..1615.91 rows=8 width=58) (actual rows=4 loops=1)
          Group Key: cs.section_code, a.assessment_no, a.title
          Batches: 1  Memory Usage: 24kB
-         Buffers: shared hit=2482
-         ->  Hash Join  (cost=11.61..1601.21 rows=1202 width=32) (actual rows=1216 loops=1)
+         Buffers: shared hit=2464
+         ->  Hash Join  (cost=11.61..1600.77 rows=1202 width=32) (actual rows=1216 loops=1)
                Hash Cond: ((cs.section_id = a.section_id) AND (m.assessment_no = a.assessment_no))
-               Buffers: shared hit=2482
-               ->  Nested Loop  (cost=0.56..1583.84 rows=1195 width=34) (actual rows=1216 loops=1)
+               Buffers: shared hit=2464
+               ->  Nested Loop  (cost=0.56..1583.40 rows=1195 width=34) (actual rows=1216 loops=1)
                      Join Filter: (cs.term_id = t.term_id)
-                     Buffers: shared hit=2479
+                     Buffers: shared hit=2461
                      ->  Seq Scan on academic_term t  (cost=0.00..1.01 rows=1 width=8) (actual rows=1 loops=1)
                            Filter: (((academic_year)::text = '2026/2027'::text) AND ((term_name)::text = 'First Semester'::text))
                            Buffers: shared hit=1
-                     ->  Nested Loop  (cost=0.56..1567.89 rows=1195 width=42) (actual rows=1216 loops=1)
-                           Buffers: shared hit=2478
+                     ->  Nested Loop  (cost=0.56..1567.44 rows=1195 width=42) (actual rows=1216 loops=1)
+                           Buffers: shared hit=2460
                            ->  Nested Loop  (cost=0.14..20.03 rows=2 width=18) (actual rows=2 loops=1)
                                  Join Filter: (c.course_id = cs.course_id)
                                  Rows Removed by Join Filter: 160
@@ -31,17 +31,17 @@
                                              Filter: ((course_code)::text = 'SYN-0040'::text)
                                              Rows Removed by Filter: 81
                                              Buffers: shared hit=1
-                           ->  Index Scan using mark_pk on mark m  (cost=0.42..767.88 rows=605 width=24) (actual rows=608 loops=2)
+                           ->  Index Scan using mark_pk on mark m  (cost=0.42..767.66 rows=605 width=24) (actual rows=608 loops=2)
                                  Index Cond: (section_id = cs.section_id)
-                                 Buffers: shared hit=2474
+                                 Buffers: shared hit=2456
                ->  Hash  (cost=6.22..6.22 rows=322 width=24) (actual rows=322 loops=1)
                      Buckets: 1024  Batches: 1  Memory Usage: 27kB
                      Buffers: shared hit=3
                      ->  Seq Scan on assessment a  (cost=0.00..6.22 rows=322 width=24) (actual rows=322 loops=1)
                            Buffers: shared hit=3
  Planning:
-   Buffers: shared hit=421
- Planning Time: 2.494 ms
- Execution Time: 10.270 ms
+   Buffers: shared hit=420
+ Planning Time: 1.749 ms
+ Execution Time: 3.248 ms
 (43 rows)
 

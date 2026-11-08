@@ -1,14 +1,14 @@
-                                                                      QUERY PLAN                                                                       
+                                                                      QUERY PLAN
 -------------------------------------------------------------------------------------------------------------------------------------------------------
- Sort  (cost=84.27..84.29 rows=8 width=58) (actual rows=4 loops=1)
+ Sort  (cost=84.34..84.36 rows=8 width=58) (actual rows=4 loops=1)
    Sort Key: cs.section_code, a.assessment_no
    Sort Method: quicksort  Memory: 25kB
    Buffers: shared hit=30 read=9
-   ->  HashAggregate  (cost=84.03..84.15 rows=8 width=58) (actual rows=4 loops=1)
+   ->  HashAggregate  (cost=84.10..84.22 rows=8 width=58) (actual rows=4 loops=1)
          Group Key: cs.section_code, a.assessment_no, a.title
          Batches: 1  Memory Usage: 24kB
          Buffers: shared hit=24 read=9
-         ->  Nested Loop  (cost=2.86..69.00 rows=1202 width=32) (actual rows=1216 loops=1)
+         ->  Nested Loop  (cost=2.86..69.07 rows=1202 width=32) (actual rows=1216 loops=1)
                Join Filter: (cs.section_id = m.section_id)
                Buffers: shared hit=24 read=9
                ->  Nested Loop  (cost=2.45..7.48 rows=4 width=34) (actual rows=4 loops=1)
@@ -39,13 +39,13 @@
                      ->  Index Scan using assessment_pk on assessment a  (cost=0.27..0.48 rows=2 width=24) (actual rows=2 loops=2)
                            Index Cond: (section_id = cs.section_id)
                            Buffers: shared hit=8
-               ->  Index Only Scan using mark_section_assessment_student_idx on mark m  (cost=0.42..11.62 rows=301 width=24) (actual rows=304 loops=4)
+               ->  Index Only Scan using mark_section_assessment_student_idx on mark m  (cost=0.42..11.64 rows=301 width=24) (actual rows=304 loops=4)
                      Index Cond: ((section_id = a.section_id) AND (assessment_no = a.assessment_no))
                      Heap Fetches: 0
                      Buffers: shared hit=11 read=9
  Planning:
-   Buffers: shared hit=453 read=6
- Planning Time: 6.566 ms
- Execution Time: 1.307 ms
+   Buffers: shared hit=461
+ Planning Time: 1.957 ms
+ Execution Time: 0.558 ms
 (47 rows)
 

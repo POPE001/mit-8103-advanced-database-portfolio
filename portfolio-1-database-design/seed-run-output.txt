@@ -1,0 +1,48 @@
+BEGIN
+INSERT 0 2
+INSERT 0 3
+INSERT 0 4
+INSERT 0 2
+INSERT 0 2
+INSERT 0 1
+INSERT 0 2
+INSERT 0 3
+INSERT 0 4
+INSERT 0 2
+INSERT 0 4
+ setval
+--------
+      2
+(1 row)
+
+ setval
+--------
+      3
+(1 row)
+
+ setval
+--------
+   1004
+(1 row)
+
+ setval
+--------
+    502
+(1 row)
+
+ setval
+--------
+    102
+(1 row)
+
+ setval
+--------
+    201
+(1 row)
+
+ setval
+--------
+    902
+(1 row)
+
+COMMIT

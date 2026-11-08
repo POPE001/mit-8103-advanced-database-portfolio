@@ -11,14 +11,17 @@ The current working design uses PostgreSQL. Review the assumptions in [requireme
 - [PostgreSQL schema](schema.sql)
 - [Sample data](seed-data.sql)
 - [Drop-after-marks edge-case check](edge-case-check.sql)
+- [Final-result readiness validation](validate-results.sql)
 - [PostgreSQL run summary](run-verification.md)
 - [Normalisation explanation](normalisation.md)
+- Captured [schema output](schema-run-output.txt), [seed output](seed-run-output.txt), [edge-case output](edge-case-output.txt), [validation output](validation-output.txt), and [PostgreSQL version](postgres-version.txt)
 
 ## Evidence included
 
 - Entity-relationship diagram, requirements, schema, sample data, and normalization explanation
-- Rollback-only SQL check for marks after an enrolment is dropped
-- PostgreSQL run summary with the observed edge-case and weighted-result outcomes
+- Rollback-only output covering retained marks, blocked edits/deletes, and blocked mark reassignment
+- Result-readiness output identifying sections with invalid assessment totals and enrolments without complete marks
+- PostgreSQL run summary with the observed edge-case outcomes
 
 ## Design decisions to review
 

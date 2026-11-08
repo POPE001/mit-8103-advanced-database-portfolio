@@ -23,6 +23,6 @@ The final weighted result is derived from the marks and assessment weights inste
 
 ## Integrity rules that need more than normalisation
 
-The schema uses primary keys, foreign keys, `UNIQUE`, and row-level `CHECK` constraints for local integrity. The active-seat count and the total assessment weight are aggregate rules across multiple rows. They are documented in [requirements.md](requirements.md) and will be enforced in the transaction/query work rather than represented as ordinary row-level checks.
+The schema uses primary keys, foreign keys, `UNIQUE`, and row-level `CHECK` constraints for local integrity. The active-seat count and the total assessment weight are aggregate rules across multiple rows. The active-seat count is checked while locking the section row in Portfolio 3. [validate-results.sql](validate-results.sql) reports sections whose assessment weights are not 100 and enrolments without a complete mark set. Weighted-result queries also return a result only when every configured assessment has a mark and the weights total 100.
 
-The mark lifecycle rule is enforced by a PostgreSQL trigger: if an enrolment is dropped, marks already present remain, but inserts, updates, and deletes for that dropped enrolment are rejected. This preserves the historical marks without copying enrolment status into the mark rows.
+The mark lifecycle rule is enforced by a PostgreSQL trigger: if an enrolment is dropped, marks already present remain, but inserts, updates, and deletes for that dropped enrolment are rejected. The mark's student, section, and assessment identity cannot be reassigned by an update. This preserves the historical marks without copying enrolment status into the mark rows.

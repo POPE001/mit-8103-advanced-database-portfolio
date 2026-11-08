@@ -13,6 +13,14 @@ UPDATE enrolment
 INSERT INTO mark (student_id, section_id, assessment_no, score_percent)
 VALUES (1003, 901, 1, 88.00);
 
+-- Create a valid active destination so the identity-move check exercises the
+-- case that previously bypassed the trigger's dropped-enrolment check.
+INSERT INTO enrolment (student_id, section_id, status)
+VALUES (1003, 902, 'enrolled');
+
+INSERT INTO assessment (section_id, assessment_no, title, weight_percent)
+VALUES (902, 1, 'Temporary edge-case assessment', 100.00);
+
 UPDATE enrolment
    SET status = 'dropped'
  WHERE student_id = 1003
@@ -62,6 +70,18 @@ BEGIN
     EXCEPTION
         WHEN check_violation THEN
             RAISE NOTICE 'PASS: retained mark deletion rejected for dropped enrolment';
+    END;
+
+    BEGIN
+        UPDATE mark
+           SET section_id = 902
+         WHERE student_id = 1003
+           AND section_id = 901
+           AND assessment_no = 1;
+        RAISE EXCEPTION 'Expected reassignment of a retained mark to be rejected';
+    EXCEPTION
+        WHEN check_violation THEN
+            RAISE NOTICE 'PASS: retained mark reassignment rejected';
     END;
 END;
 $$;

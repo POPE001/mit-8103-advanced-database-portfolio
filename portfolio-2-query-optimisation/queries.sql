@@ -13,14 +13,16 @@ JOIN enrolment AS e USING (student_id)
 JOIN course_section AS cs USING (section_id)
 JOIN course AS c USING (course_id)
 JOIN academic_term AS t USING (term_id)
-JOIN mark AS m USING (student_id, section_id)
-JOIN assessment AS a USING (section_id, assessment_no)
+JOIN assessment AS a USING (section_id)
+LEFT JOIN mark AS m USING (student_id, section_id, assessment_no)
 WHERE s.matric_number = 'SYN-2026-000001'
   AND t.academic_year = '2026/2027'
   AND t.term_name = 'First Semester'
   AND e.status IN ('enrolled', 'completed')
 GROUP BY s.matric_number, t.academic_year, t.term_name,
          c.course_code, c.title, cs.section_code
+HAVING COUNT(m.assessment_no) = COUNT(a.assessment_no)
+   AND SUM(a.weight_percent) = 100.00
 ORDER BY c.course_code, cs.section_code;
 
 -- 2. Current seat usage by course section for the academic term.
@@ -50,13 +52,15 @@ WITH student_results AS (
     JOIN course_section AS cs USING (course_id)
     JOIN academic_term AS t USING (term_id)
     JOIN enrolment AS e USING (section_id)
-    JOIN mark AS m USING (student_id, section_id)
-    JOIN assessment AS a USING (section_id, assessment_no)
+    JOIN assessment AS a USING (section_id)
+    LEFT JOIN mark AS m USING (student_id, section_id, assessment_no)
     WHERE c.course_code = 'SYN-0040'
       AND t.academic_year = '2026/2027'
       AND t.term_name = 'First Semester'
       AND e.status IN ('enrolled', 'completed')
     GROUP BY cs.section_id, cs.section_code, e.student_id
+    HAVING COUNT(m.assessment_no) = COUNT(a.assessment_no)
+       AND SUM(a.weight_percent) = 100.00
 )
 SELECT section_code,
        count(*) AS students_with_results,

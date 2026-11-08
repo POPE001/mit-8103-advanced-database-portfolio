@@ -163,7 +163,21 @@ DECLARE
     target_section_id BIGINT;
     current_enrolment_status VARCHAR(12);
 BEGIN
+    -- A mark's identity identifies its student, section, and assessment.
+    -- Do not let an UPDATE move an existing mark to another enrolment or assessment.
+    IF TG_OP = 'UPDATE'
+       AND ROW(NEW.student_id, NEW.section_id, NEW.assessment_no)
+           IS DISTINCT FROM ROW(OLD.student_id, OLD.section_id, OLD.assessment_no) THEN
+        RAISE EXCEPTION
+            'A mark identity cannot be changed; update the score only.'
+            USING ERRCODE = 'check_violation';
+    END IF;
+
     IF TG_OP = 'DELETE' THEN
+        target_student_id := OLD.student_id;
+        target_section_id := OLD.section_id;
+    ELSIF TG_OP = 'UPDATE' THEN
+        -- Updates retain the same identity, so check the existing enrolment.
         target_student_id := OLD.student_id;
         target_section_id := OLD.section_id;
     ELSE

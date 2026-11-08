@@ -1,0 +1,12 @@
+Sections with no assessments or assessment weights that do not total 100:
+ section_id | course_code | section_code | assessment_count | total_weight_percent
+------------+-------------+--------------+------------------+----------------------
+        902 | CSC8101     | A            |                0 |                 0.00
+(1 row)
+
+Enrolments without a complete mark set for a 100-percent assessment set:
+ student_id | section_id | expected_assessments | recorded_marks | total_weight_percent
+------------+------------+----------------------+----------------+----------------------
+       1001 |        902 |                    0 |              0 |                 0.00
+(1 row)
+

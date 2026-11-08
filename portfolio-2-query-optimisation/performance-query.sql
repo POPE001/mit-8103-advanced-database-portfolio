@@ -9,13 +9,15 @@ WITH student_results AS (
     JOIN course_section AS cs USING (course_id)
     JOIN academic_term AS t USING (term_id)
     JOIN enrolment AS e USING (section_id)
-    JOIN mark AS m USING (student_id, section_id)
-    JOIN assessment AS a USING (section_id, assessment_no)
+    JOIN assessment AS a USING (section_id)
+    LEFT JOIN mark AS m USING (student_id, section_id, assessment_no)
     WHERE c.course_code = 'SYN-0040'
       AND t.academic_year = '2026/2027'
       AND t.term_name = 'First Semester'
       AND e.status IN ('enrolled', 'completed')
     GROUP BY cs.section_id, cs.section_code, e.student_id
+    HAVING COUNT(m.assessment_no) = COUNT(a.assessment_no)
+       AND SUM(a.weight_percent) = 100.00
 )
 SELECT section_code,
        count(*) AS students_with_results,

@@ -25,15 +25,16 @@ The system supports course and section setup, student enrolment, assessment mark
 - Assessment weights for a section must total 100 before its final result is treated as complete.
 - The final percentage is derived as `SUM(score_percent * weight_percent) / 100`; it is not stored as a second copy of the marks.
 - If an enrolment is changed to `dropped`, marks already recorded are retained. While it is dropped, new marks, mark corrections, and mark deletions are rejected. A dropped enrolment is not eligible for a final result.
+- A mark's identity `(student_id, section_id, assessment_no)` cannot be reassigned; corrections to an eligible mark may change its score only.
 
 ## Rules enforced outside a row-level `CHECK`
 
 PostgreSQL `CHECK` constraints validate one row at a time. The following rules span multiple rows and need transaction logic, a trigger, or an explicit validation step:
 
 - Section capacity: Portfolio 3 will demonstrate checking the active enrolment count while locking the section row in the same transaction.
-- Assessment weights totaling 100: validate the section's assessment set before publishing final results.
+- Assessment weights totaling 100 and a complete mark set: run [validate-results.sql](validate-results.sql) before treating a weighted percentage as a final result.
 
-The dropped-enrolment mark rule is enforced by a PostgreSQL trigger. The rollback-only script in [edge-case-check.sql](edge-case-check.sql) demonstrates mark retention and rejection of later changes.
+The dropped-enrolment mark rule and immutable mark identity are enforced by a PostgreSQL trigger. The rollback-only script in [edge-case-check.sql](edge-case-check.sql) demonstrates mark retention and rejection of later changes, including reassignment to another section.
 
 ## Out of scope for this version
 
